@@ -2,8 +2,6 @@
 
 s="hello world"
 
-
-
 def reverseChar(s):
 
     res=""
