@@ -40,7 +40,22 @@ def equlibrium(A):
          return i
    return -1   
 
+def optimziedSol(A):
+   n=len(A)
+   totalSum=sum(A)
+   leftSum=0
+
+   for i in range(n):
+      rightSum=totalSum-leftSum-A[i]
+
+      if leftSum==rightSum:
+         return i
+      
+      leftSum+=A[i]
+
+   return -1   
+
 A=list(map(int,input("Enter the element: ").split()))
-print(equlibrium(A))
+print(optimziedSol(A))
 
 
