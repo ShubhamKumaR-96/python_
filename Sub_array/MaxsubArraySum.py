@@ -11,6 +11,22 @@ def maxSum(A,k):
         
     return maxVal
 
+# Optimized way
+
+def maxSubArraySum(A,K):
+    n=len(A)
+
+    totalSum=sum(A[:K])
+    maxSum=totalSum
+
+    for i in range(1,n-K+1):
+        totalSum=(totalSum - A[i-1]) + A[i+K-1]
+        maxSum=max(totalSum,maxSum)
+
+    return maxSum    
+
+    
+
 A=list(map(int,input("Enter the element: ").split()))
 k=5
-print(maxSum(A,k))    
+print(maxSubArraySum(A,k))    
