@@ -12,6 +12,18 @@ def palindrome(s):
         if s[i]!=ans[i]:
             return False
         
-        return True
+    return True
 
-print(palindrome("madma"))     
+def palin(A):
+    s=0
+    e=len(A)-1
+
+    while s<e:
+        if A[s] != A[e]:
+            return False
+        s+=1
+        e-=1
+    return True    
+
+
+print(palin("mada"))     

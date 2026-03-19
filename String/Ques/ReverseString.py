@@ -4,15 +4,13 @@ s="hello world"
 
 def reverseChar(s):
 
-    res=""
+    res=[]
 
     for i in range(len(s)-1 , -1, -1):
-        res+=s[i]
+        res.append(s[i])
 
-    return res
+    return "".join(res)
 
 print(reverseChar(s))    
-
-
 
 

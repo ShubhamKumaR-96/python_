@@ -5,14 +5,14 @@
 def remove_dup(S):
 
     seen=set()
-    result=""
+    result=[]
 
     for char in S:
         if char not in seen:
             seen.add(char)
-            result+=char
+            result.append(char)
 
-    return result
+    return "".join(result)
 
 print(remove_dup("hello"))        
 
